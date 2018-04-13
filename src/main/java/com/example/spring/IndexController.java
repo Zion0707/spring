@@ -8,15 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class IndexController {
-
-    @Value("${cupSize}")
-    private String cupSize;
-
-    @Value("${age}")
-    private Integer age;
-
     @RequestMapping(value="/", method= RequestMethod.GET)
     public String say(){
-        return cupSize + age;
+        return "index";
     }
 }
